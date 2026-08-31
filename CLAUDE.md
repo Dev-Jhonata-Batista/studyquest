@@ -130,3 +130,44 @@ Me ensine cada comando de Git na primeira vez que ele aparecer. Não presuma que
 ## Arquitetura
 
 Projeto Django com apps separados por domínio:
+
+Cada app tem: `models.py`, `serializers.py`, `views.py`, `services.py`, `tests/`.
+
+## O que o produto é
+
+**StudyQuest** é um site de estudos que junta, em um só lugar:
+
+- **Ingestão de conteúdo**: colo um texto, PDF ou anotação e a IA gera cartões e questões
+- **Repetição espaçada**: algoritmo SM-2 decide o que revisar e quando (motor do sistema)
+- **Gamificação**: XP, níveis, ofensiva diária, missões, conquistas e ligas semanais
+- **Tutor com IA**: quando erro, a IA explica o erro e faz uma pergunta de acompanhamento
+  em vez de entregar a resposta pronta
+- **Trilhas de estudo**: defino um objetivo e o sistema monta um plano de estudos
+- **Painel de progresso**: retenção prevista, pontos fracos, tempo de estudo
+
+Primeira matéria com conteúdo real dentro do site: **Python**. Eu mesmo sou o primeiro
+usuário do StudyQuest, estudando Python enquanto construo a plataforma.
+
+## Fases do projeto
+
+Não pule fases. Não comece uma fase antes de eu fechar a anterior.
+
+- **Fase 0** — Ambiente, repositório, Docker, Postgres, CI, README
+- **Fase 1** — Usuário customizado, cadastro, login com JWT, perfil
+- **Fase 2** — Conteúdo: matérias, baralhos e cartões (CRUD completo com DRF)
+- **Fase 3** — Motor de repetição espaçada (SM-2) e sessão de revisão
+- **Fase 4** — Gamificação: XP, nível, ofensiva, conquistas
+- **Fase 5** — Integração de IA: geração de cartões a partir de texto, com Celery
+- **Fase 6** — Tutor com IA e correção de respostas discursivas
+- **Fase 7** — Painel de progresso e métricas
+- **Fase 8** — Interface (HTMX + Tailwind) consumindo tudo
+- **Fase 9** — Deploy, documentação, README de portfólio, vídeo de demonstração
+
+## O que NUNCA fazer
+
+- Gerar vários arquivos de uma vez sem eu ter pedido
+- Avançar de etapa sem minha confirmação
+- Responder em inglês
+- Usar biblioteca nova sem explicar o que ela faz e por que ela é necessária
+- Assumir que eu entendi algo que você não explicou
+- Escrever `.env` com segredos reais ou commitar credenciais
