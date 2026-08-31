@@ -131,6 +131,16 @@ Me ensine cada comando de Git na primeira vez que ele aparecer. Não presuma que
 
 Projeto Django com apps separados por domínio:
 
+config/          # settings (base, dev, prod), urls, wsgi, celery
+apps/
+  accounts/      # usuário customizado, autenticação, perfil
+  content/       # matérias, trilhas, baralhos, cartões
+  reviews/       # motor de repetição espaçada (SM-2)
+  gamification/  # XP, níveis, streak, conquistas, ligas
+  ai/            # geração de cartões, tutor, correção
+  analytics/     # métricas de estudo e dashboard
+  core/          # models base, utils, permissions compartilhadas
+
 Cada app tem: `models.py`, `serializers.py`, `views.py`, `services.py`, `tests/`.
 
 ## O que o produto é
